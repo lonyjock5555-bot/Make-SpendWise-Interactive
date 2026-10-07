@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SpendWise Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <span class="brand-icon">S</span>
+                <h2>SpendWise</h2>
+            </div>
+
+            <nav class="navigation" aria-label="Main navigation">
+                <a href="#" class="nav-link active">Dashboard</a>
+                <a href="#" class="nav-link">Transactions</a>
+                <a href="#" class="nav-link">Budgets</a>
+                <a href="#" class="nav-link">Savings</a>
+                <a href="#" class="nav-link">Settings</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>Personal Finance</p>
+                <small>Manage your money wisely.</small>
+            </div>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Header -->
+            <header class="header">
+
+                <div class="header-text">
+                    <p class="eyebrow">Overview</p>
+                    <h1>Dashboard</h1>
+                    <p>Welcome back, Lony Jock! Here's your financial overview.</p>
+                </div>
+
+        <div class="profile">
+
+          <img src="jock.jfif"
+              alt="Lony Jock profile picture"
+              class="profile-avatar">
+
+           <div>
+            <strong>Lony Jock</strong>
+          <small>Personal Account</small>
+       </div>
+
+    </div>
+
+            </header>
+
+            <!-- Dashboard Summary -->
+            <section class="summary" aria-label="Financial summary">
+
+                <div class="summary-item">
+                    <span>Total Budget</span>
+                    <strong id="total-budget">KES 50,000</strong>
+                </div>
+
+                <div class="summary-item">
+                    <span>Total Spent</span>
+                    <strong id="total-spent">KES 28,500</strong>
+                </div>
+
+                <div class="summary-item">
+                    <span>Remaining</span>
+                    <strong id="remaining-budget">KES 21,500</strong>
+                </div>
+
+            </section>
+
+<!-- Add Expense Section -->
+<section class="expense-form-section">
+
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">Manage Expenses</p>
+            <h2>Add New Expense</h2>
+        </div>
+    </div>
+
+    <form id="expense-form">
+
+        <div>
+            <label for="expense-name">Expense Name</label>
+            <input
+                type="text"
+                id="expense-name"
+                placeholder="e.g. Lunch"
+                required
+            >
+        </div>
+
+        <div>
+            <label for="expense-amount">Amount</label>
+            <input
+                type="number"
+                id="expense-amount"
+                placeholder="e.g. 350"
+                min="1"
+                required
+            >
+        </div>
+
+        <div>
+            <label for="expense-category">Category</label>
+            <select id="expense-category" required>
+                <option value="">Select category</option>
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Rent">Rent</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Savings">Savings</option>
+                <option value="Utilities">Utilities</option>
+            </select>
+        </div>
+
+        <button type="submit">Add Expense</button>
+
+    </form>
+
+    <p id="budget-message"></p>
+
+</section>
+
+                    <!-- Food -->
+                    <article class="category-card food-card" tabindex="0">
+
+                        <div class="card-top">
+                            <span class="category-icon">🍲</span>
+                            <span class="card-label">Food</span>
+                        </div>
+
+                        <div class="card-details">
+                           <h3 id="food-total">KES 6,500</h3>
+                            <p>Monthly food expenses</p>
+                        </div>
+
+                        <div class="card-bottom">
+                            <strong id="food-percent">65%</strong>
+                            <strong>65%</strong>
+                        </div>
+
+                    </article>
+
+                    <!-- Transport -->
+                    <article class="category-card transport-card" tabindex="0">
+
+                        <div class="card-top">
+                            <span class="category-icon">🚌</span>
+                            <span class="card-label">Transport</span>
+                        </div>
+
+                        <div class="card-details">
+                            <h3 id="transport-total">KES 3,000</h3>
+                            <p>Monthly transport expenses</p>
+                        </div>
+
+                        <div class="card-bottom">
+                           <strong id="transport-percent">60%</strong>
+                            <strong>60%</strong>
+                        </div>
+
+                    </article>
+
+                    <!-- Rent -->
+                    <article class="category-card rent-card" tabindex="0">
+
+                        <div class="card-top">
+                            <span class="category-icon">🏠</span>
+                            <span class="card-label">Rent</span>
+                        </div>
+
+                        <div class="card-details">
+                            <h3 id="rent-total">KES 12,000</h3>
+                            <p>Monthly housing expenses</p>
+                        </div>
+
+                        <div class="card-bottom">
+                            <strong id="rent-percent">80%</strong>
+                            <strong>80%</strong>
+                        </div>
+
+                    </article>
+
+                    <!-- Entertainment -->
+                    <article class="category-card entertainment-card" tabindex="0">
+
+                        <div class="card-top">
+                            <span class="category-icon">🎬</span>
+                            <span class="card-label">Entertainment</span>
+                        </div>
+
+                        <div class="card-details">
+                            <h3 id="entertainment-total">KES 2,000</h3>
+                            <p>Monthly entertainment expenses</p>
+                        </div>
+
+                        <div class="card-bottom">
+                            <strong id="entertainment-percent">50%</strong>
+                            <strong>50%</strong>
+                        </div>
+
+                    </article>
+
+                    <!-- Savings -->
+                    <article class="category-card savings-card" tabindex="0">
+
+                        <div class="card-top">
+                            <span class="category-icon">💰</span>
+                            <span class="card-label">Savings</span>
+                        </div>
+
+                        <div class="card-details">
+                            <h3 id="savings-total">KES 3,500</h3>
+                            <p>Monthly savings contribution</p>
+                        </div>
+
+                        <div class="card-bottom">
+                            <h3 id="savings-total">KES 3,500</h3>
+                            <strong>35%</strong>
+                        </div>
+
+                    </article>
+
+                    <!-- Utilities -->
+                    <article class="category-card utilities-card" tabindex="0">
+
+                        <div class="card-top">
+                            <span class="category-icon">💡</span>
+                            <span class="card-label">Utilities</span>
+                        </div>
+
+                        <div class="card-details">
+                            <h3 id="utilities-total">KES 1,500</h3>
+                            <p>Monthly utility expenses</p>
+                        </div>
+
+                        <div class="card-bottom">
+                            <strong id="utilities-percent">50%</strong>
+                            <strong>50%</strong>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+            <!-- Recent Activity -->
+            <section class="recent-activity" aria-labelledby="activity-title">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Transactions</p>
+                        <h2 id="activity-title">Recent Activity</h2>
+                    </div>
+                </div>
+
+                <div class="activity-list" id="activity-list">
+
+                    <div class="activity-item">
+                        <span class="activity-icon">🍲</span>
+                        <div>
+                            <strong>Lunch</strong>
+                            <small>Food</small>
+                        </div>
+                        <strong>- KES 350</strong>
+                    </div>
+
+                    <div class="activity-item">
+                        <span class="activity-icon">🚌</span>
+                        <div>
+                            <strong>Bus Fare</strong>
+                            <small>Transport</small>
+                        </div>
+                        <strong>- KES 100</strong>
+                    </div>
+
+                    <div class="activity-item">
+                        <span class="activity-icon">💡</span>
+                        <div>
+                            <strong>Electricity</strong>
+                            <small>Utilities</small>
+                        </div>
+                        <strong>- KES 500</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p>&copy; 2026 SpendWise. Built for personal finance management.</p>
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
